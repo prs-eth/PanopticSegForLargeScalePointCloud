@@ -180,21 +180,21 @@ Train - test split is given by NIBIO: 56 train files, 26 test files. We decided 
 |<h3> Parameter </h3>|<h3> Value <h3>|<h3> Where to find/How to set in code </h3>|
 | :--------------------: | :---------------------: | :-------------------------------: |
 | Choose different settings in Table 2 in the original paper| Setting I-V| Setting I: models=panoptic/area4_ablation_19, Setting II: models=panoptic/area4_ablation_14, Setting III: models=panoptic/area4_ablation_15, Setting IV: models=panoptic/area4_ablation_3heads_5 Setting V: models=panoptic/area4_ablation_3heads_6 |
-| Number of training iterations | 150 epochs | conf/training/#NameOfYourChosenConfigFile#.yaml, line 3: epochs|
-| Voxel size/subsampling size | 0.2 (m) | conf/data/panoptic/#NameOfYourChosenConfigFile#.yaml, line 11: first_subsampling |
-| Radius of sampling cylinder | 8 (m) | conf/data/panoptic/#NameOfYourChosenConfigFile#.yaml, line 12: radius |
+| Number of training iterations | 150 epochs | conf/training/#NameOfYourChosenConfigFile#.yaml, epochs|
+| Voxel size/subsampling size | 0.2 (m) | conf/data/panoptic/#NameOfYourChosenConfigFile#.yaml, first_subsampling |
+| Radius of sampling cylinder | 8 (m) | conf/data/panoptic/#NameOfYourChosenConfigFile#.yaml, radius |
 | The folder name of your output files | #YourOutputFolderName# | job_name=#YourOutputFolderName# |
 
 1. Create wandb account and specify your own wandb account name in conf/training/*.yaml. Have a look at all needed configurations of your current run in conf/data/panoptic/*.yaml, conf/models/panoptic/*.yaml and conf/training/*.yaml. Perform training by running:
 
 ```bash
-#An example for NPM3D dataset
+# An example for NPM3D dataset
 # Run Setting IV for test area 1, radius=16m, voxel side length=0.12m, training for 200 epoches.
 python train.py task=panoptic data=panoptic/npm3d-sparseconv_grid_012_R_16_cylinder_area1 models=panoptic/area4_ablation_3heads_5 model_name=PointGroup-PAPER training=7_area1 job_name=A1_S7
 
-#An example for FOR-instance dataset
+# An example for FOR-instance dataset
 # Run Setting IV, radius=8m, voxel side length=0.2m, training for 150 epoches.
-python train.py task=panoptic data=panoptic/treeins models=panoptic/area4_ablation_3heads model_name=PointGroup-PAPER training=treeins job_name=treeins_my_first_run
+python train.py task=panoptic data=panoptic/treeins_rad8 models=panoptic/area4_ablation_3heads_5 model_name=PointGroup-PAPER training=treeins job_name=treeins_my_first_run
 ```
 
 2. Look at "TO ADAPT" comments in conf/eval.yaml and change accordingly. Perform evaluation by running:
@@ -204,7 +204,11 @@ python eval.py
 
 3. Look at "TO ADAPT" comments in evaluation_stats.py and change accordingly, then run:
 ```bash
-python evaluation_stats.py
+# For NPM3D dataset
+python evaluation_stats_NPM3D.py
+
+# For FOR-instance dataset
+python evaluation_stats_FOR.py
 ```
 
 # Citing
