@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="40%" src="https://github.com/bxiang233/PanopticSegForLargeScalePointCloud/blob/main/Docs/instance%20segmentation%20visualization%20new.png" />
+  <img width="100%" src="https://github.com/bxiang233/PanopticSegForLargeScalePointCloud/blob/main/Docs/instance%20segmentation%20visualization%20new.png" />
 </p>
 
 # Set up environment
