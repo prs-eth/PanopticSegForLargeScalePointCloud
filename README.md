@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img width="100%" src="/Docs/instance%20segmentation%20visualization%202.png" />
+  <img width="100%" src="/Docs/instance%20segmentation%20visualization2.png" />
 </p>
 
 # Set up environment
