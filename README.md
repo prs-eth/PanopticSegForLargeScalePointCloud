@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img width="40%" src="https://github.com/bxiang233/PanopticSegForLargeScalePointCloud/blob/main/Docs/instance%20segmentation%20visualization%20new.png" />
+</p>
+
 # Set up environment
 
 The framework used in this code is torchpoints-3d, so generally the installation instructions for torchpoints-3d can follow the official ones: 
