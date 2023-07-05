@@ -3,6 +3,10 @@
   <img width="100%" src="/Docs/instance%20segmentation%20visualization%20new.png" />
 </p>
 
+<p align="center">
+  <img width="100%" src="/Docs/instance%20segmentation%20visualization%202.png" />
+</p>
+
 # Set up environment
 
 The framework used in this code is torchpoints-3d, so generally the installation instructions for torchpoints-3d can follow the official ones: 
