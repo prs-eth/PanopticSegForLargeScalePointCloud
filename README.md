@@ -1,3 +1,6 @@
+# Toward Accurate Instance Segmentation in Large-scale LiDAR Point Clouds
+
+This repository represents the official code for paper entitled "Towards accurate instance segmentation in large-scale LiDAR point clouds". This study explores the steps of the panoptic segmentation pipeline concerned with clustering points into object instances, with the goal to alleviate that bottleneck. We find that a carefully designed clustering strategy, which leverages multiple types of learned point embeddings, significantly improves instance segmentation. Experiments on the NPM3D urban mobile mapping dataset and the FOR-instance forest dataset demonstrate the effectiveness and versatility of the proposed strategy.
 
 <p align="center">
   <img width="100%" src="/Docs/instance%20segmentation%20visualization%20new.png" />
