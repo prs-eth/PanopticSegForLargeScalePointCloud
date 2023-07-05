@@ -1,0 +1,2 @@
+# PanopticSegForLargeScalePointCloud
+Code and dataset of paper "TOWARDS ACCURATE INSTANCE SEGMENTATION IN LARGE-SCALE LIDAR POINT CLOUDS"
