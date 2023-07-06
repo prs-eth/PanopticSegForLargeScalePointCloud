@@ -98,7 +98,7 @@ Based on our experience, we would suggest build most of the packages from the so
 
 ## NPM3D dataset with instance labels
 Link for dataset download:
-https://polybox.ethz.ch/index.php/s/3lRK77aKdOVQUVB
+https://doi.org/10.5281/zenodo.8118986
 
 ### Semantic labels
 1: "ground",
