@@ -224,6 +224,6 @@ If you find our work useful, please do not hesitate to cite it:
   author={Binbin Xiang and Torben Peters and Theodora Kontogianni and Frawa Vetterli1 and Stefano Puliti and Rasmus Astrup and Konrad Schindler},
   booktitle={2023 The ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences},
   year={2023},
-  url = {\url{To be added}}
+  url = {\url{https://arxiv.org/abs/2307.02877}}
 }
 ```
