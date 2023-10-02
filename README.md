@@ -129,9 +129,9 @@ https://doi.org/10.5281/zenodo.8118986
 ```
 
 ## FOR-instance dataset
-Link for dataset download:
-
-#TO BE ADDED#
+Updated!! Since FOR-instance dataset is open. I open the link ((https://polybox.ethz.ch/index.php/s/wVBlHgH308GRr1c)) for download: 
+1. all .ply files
+2. the pretrained model for the input radius of cylinders = 8m
 
 ### Different forest regions/subgroups of trees
 |<h3> Forest region </h3>|<h3> Number of files <h3>|<h3> Approx. largest tree heights </h3>|
