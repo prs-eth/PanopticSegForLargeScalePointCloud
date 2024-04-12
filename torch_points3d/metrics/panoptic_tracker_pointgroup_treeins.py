@@ -600,12 +600,12 @@ class PanopticTracker(SegmentationTracker):
                         "vote1regularfull.ply",
                     )'''
                     # semantic prediction and GT label full cloud (for final evaluation)
-                    # self._dataset.to_eval_ply(
-                    #    test_area_i.pos,
-                    #    torch.argmax(full_pred, 1).numpy(), #[0, ..]
-                    #    test_area_i.y,   #[-1, ...]
-                    #    "Semantic_results_forEval.ply",
-                    # )
+                    self._dataset.to_eval_ply(
+                        test_area_i.pos,
+                        torch.argmax(full_pred, 1).numpy(), #[0, ..]
+                        test_area_i.y,   #[-1, ...]
+                        "Semantic_results_forEval_{}.ply".format(i),
+                    )
                     # instance
                     has_prediction = test_area_i.ins_pre != -1
                     # full_ins_pred_embed = knn_interpolate(
@@ -662,13 +662,13 @@ class PanopticTracker(SegmentationTracker):
                         if size_l < 10:
                             full_ins_pred[label_mask_l] = -1
 
-                    '''self._dataset.to_eval_ply(
-                        self._test_area.pos,
-                        full_ins_pred_embed.numpy(),  #[-1, ...]
-                        self._test_area.instance_labels,  #[0, ..]
-                        "Instance_Embed_results_forEval.ply",
-                    )
                     self._dataset.to_eval_ply(
+                        self._test_area.pos,
+                        full_ins_pred.numpy(),  #[-1, ...]
+                        self._test_area.instance_labels,  #[0, ..]
+                        "Instance_Results_forEval_{}.ply".format(i),
+                    )
+                    '''self._dataset.to_eval_ply(
                         self._test_area.pos,
                         full_ins_pred_offset.numpy(),
                         self._test_area.instance_labels,
@@ -681,7 +681,7 @@ class PanopticTracker(SegmentationTracker):
                         full_ins_pred.numpy(),
                         test_area_i.y,
                         test_area_i.instance_labels,
-                        "Evaluation_{}.txt".format(i),  # @Treeins: save evaulation metrics of current data file
+                        "Evaluation_{}".format(i),  # @Treeins: save evaulation metrics of current data file
                     )
                     # instance prediction with color for "things"
                     things_idx = full_ins_pred != -1
