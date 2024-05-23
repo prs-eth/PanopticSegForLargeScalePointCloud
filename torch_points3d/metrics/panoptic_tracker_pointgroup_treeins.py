@@ -288,7 +288,7 @@ class PanopticTracker(SegmentationTracker):
         #    self._test_area.ins_pre = self.get_cur_ins_pre_label(self._test_area.clusters, self._test_area.scores.cpu().numpy(), self._test_area.ins_pre.cpu().numpy())
         #    self._test_area.ins_pre = torch.tensor(self._test_area.ins_pre).to(model.device)
 
-        self._dump_visuals_fortest(outputs, originids, valid_c_idx)
+        #self._dump_visuals_fortest(outputs, originids, valid_c_idx)
 
         self.block_count += 1  # With each call of track(...), we go on cylinder or sphere block further
 
